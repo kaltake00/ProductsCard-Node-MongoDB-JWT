@@ -26,7 +26,7 @@ This is a RESTful backend app based on Node.js, Express.js, MongoDB, Mongoose an
 * Required: 
     - email: String
     - password: string
-
+***
 ` Sign in `
 - /api/auth/signup
 * Required: 
@@ -60,4 +60,4 @@ Description | Path | Requirements | Optional | Headers
 ------------ | ------------- | --------------- | --------------- | --------------- |
 Sign Up | /api/auth/signup | email: String, password: String | none | none
 Sign In | /api/auth/signin | email: String, Password: String | none | none
-Creating products list | 
+Creating products list | /api/products/create | listName: String <br>  `Example: "listName" : "Updated list name"` |
