@@ -22,14 +22,34 @@ This is a RESTful backend app based on Node.js, Express.js, MongoDB, Mongoose an
 # APIs
 
 ` Sign up `
-- http://localhost:8080/api/auth/signup
+- /api/auth/signup
 * Requirements: 
     - email: String
     - password: string
 
-*** Log In ***
-- http://localhost:8080/api/auth/signup
+` Sign in `
+- /api/auth/signup
 * Requirements: 
     - email: String
     - password: string
 
+` Creating products list `
+- /api/products/create
+* Requirements:
+    - listName : String
+    `Example: "listName" : "Updated list name"`
+* Optional:
+    - products : Array with Objects 
+        - name: String
+        - quantity: String
+    `Example: "products":[{"name":"Apple","quantity":"12"}, {"name":"Cherry","quantity":"6"}]`
+
+`Updating Products list` - You can change list name by parameter `listName` or products in list by parameter `products`
+- /api/products/update
+* Required:
+    - products : Array with Objects 
+        - name: String
+        - quantity: String
+    `Example: "products":[{"name":"Apple","quantity":"12"}, {"name":"Cherry","quantity":"6"}]`
+* Optional:
+    - listName: String
