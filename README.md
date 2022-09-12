@@ -56,8 +56,13 @@ Note: If product does not exists in list. It will be added automatically.
     - listName: String
 
 
-Description | Path | Requirements | Optional | Headers
+Description | Path | Body Required | Body Optional | Headers
 ------------ | ------------- | --------------- | --------------- | --------------- |
 Sign Up | /api/auth/signup | email: String, password: String | none | none |
 Sign In | /api/auth/signin | email: String, Password: String | none | none |
-Creating products list | /api/products/create | listName: String <br>  `Example: "listName" : "Updated list name"` | products : Array with object <br> `Example: "products":[{"name":"Apple","quantity":"12"}, {"name":"Cherry","quantity":"6"}]` | x-access-token : `yourToken` |
+Creating list | /api/products/create | listName: String | products : Array with object | x-access-token |
+Updating list | /api/products/update | products : Array with objects | listName: String | x-access-token |
+Deleting list item | /api/products/deleteproductitem/`ItemName` | None | None | x-acces-token | 
+Change Password | /api/user/changepassword | "password" : String | None | x-access-token | 
+Deleting List | /api/products/delete | None | None | x-access-token |
+Get all products | /api/products/ | None | None | x-access-token |
