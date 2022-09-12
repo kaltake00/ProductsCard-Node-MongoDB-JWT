@@ -66,8 +66,16 @@ Get all products | /api/products/ | None | None | x-access-token | `GET` |
         {"name":"Cherry" , "quantity":"9"},
         {"name":"Orange", "quantity":"3"}
     ]
-    #Note: If Product does not exist already in list, it will be added automatically!
+    #Note: If Product does not exists already in list, it will be added automatically!
 }
+
+```
+
+**Delete product item**
+```
+# Simply use DELETE method and add ItemName parameter at the end of URL
+
+/api/deleteitem/Apple
 
 ```
 
