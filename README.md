@@ -33,13 +33,42 @@ Deleting list item | /api/products/deleteitem/`ItemName` | None | None | x-acces
 Deleting List | /api/products/delete | None | None | x-access-token | `DELETE` |
 Get all products | /api/products/ | None | None | x-access-token | `GET` |
 
-## Examples
+## Some Examples
+
+**Sign Up - Let's pass the parameters through the body in the following way**
 ```
-#Sign UP pass email and password on body of req.:
 {   
     "email": "myemail@mail.com",
     "password":"mypassword" 
 }
+
+```
+**Creating products list**
+```
+{   
+    "listName": "My new list",
+    # this parameter is optional:
+    "products":[
+        {"name":"Apple" , "quantity":"3"},
+        {"name":"Cherry" , "quantity":"3"}
+    ]
+}
+
+```
+**Update products list**
+```
+{   
+    # this parameter is optional:
+    "listName": "My new list",
+
+    "products":[
+        {"name":"Apple" , "quantity":"6"},
+        {"name":"Cherry" , "quantity":"9"},
+        {"name":"Orange", "quantity":"3"}
+    ]
+    #Note: If Product does not exist already in list, it will be added automatically!
+}
+
 ```
 
 
