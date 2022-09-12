@@ -32,7 +32,7 @@ This is a RESTful backend app based on Node.js, Express.js, MongoDB, Mongoose an
 * Required: 
     - email: String
     - password: string
-<hr></hr>
+***
 ` Creating products list `
 - /api/products/create
 * Required:
@@ -43,7 +43,7 @@ This is a RESTful backend app based on Node.js, Express.js, MongoDB, Mongoose an
         - name: String
         - quantity: String
     `Example: "products":[{"name":"Apple","quantity":"12"}, {"name":"Cherry","quantity":"6"}]`
-<hr></hr>
+***
 `Updating Products list` - You can change list name by parameter `listName` or products in list by parameter `products`.
 Note: If product does not exists in list. It will be added automatically.
 - /api/products/update
@@ -56,7 +56,8 @@ Note: If product does not exists in list. It will be added automatically.
     - listName: String
 
 
-Description | Path | Requirements | Optional
------------- | ------------- | --------------- | --------- |
-Sign Up | /api/auth/signup | email: String, password: String | none
-Content in the first column | Content in the second column
+Description | Path | Requirements | Optional | Headers
+------------ | ------------- | --------------- | --------------- | --------------- |
+Sign Up | /api/auth/signup | email: String, password: String | none | none
+Sign In | /api/auth/signin | email: String, Password: String | none | none
+Creating products list | 
