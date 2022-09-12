@@ -21,7 +21,7 @@ This is a RESTful backend app based on Node.js, Express.js, MongoDB, Mongoose an
 
 # APIs
 
-* Sign up *
+` Sign up `
 - http://localhost:8080/api/auth/signup
 * Requirements: 
     - email: String
