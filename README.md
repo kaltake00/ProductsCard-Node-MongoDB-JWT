@@ -21,40 +21,6 @@ This is a RESTful backend app based on Node.js, Express.js, MongoDB, Mongoose an
 
 # APIs
 
-` Sign up `
-- /api/auth/signup
-* Required: 
-    - email: String
-    - password: string
-***
-` Sign in `
-- /api/auth/signup
-* Required: 
-    - email: String
-    - password: string
-***
-` Creating products list `
-- /api/products/create
-* Required:
-    - listName : String
-    `Example: "listName" : "Updated list name"`
-* Optional:
-    - products : Array with Objects 
-        - name: String
-        - quantity: String
-    `Example: "products":[{"name":"Apple","quantity":"12"}, {"name":"Cherry","quantity":"6"}]`
-***
-`Updating Products list` - You can change list name by parameter `listName` or products in list by parameter `products`.
-Note: If product does not exists in list. It will be added automatically.
-- /api/products/update
-* Required:
-    - products : Array with Objects 
-        - name: String
-        - quantity: String
-    `Example: "products":[{"name":"Apple","quantity":"12"}, {"name":"Cherry","quantity":"6"}]`
-* Optional:
-    - listName: String
-
 
 Description | Path | Body Required | Body Optional | Headers | Method |
 ------------ | ------------- | --------------- | --------------- | --------------- | --------------- |
@@ -63,6 +29,17 @@ Sign In | /api/auth/signin | email: String, Password: String | none | none | `PO
 Change Password | /api/user/changepassword | "password" : String | None | x-access-token | `PUT` | 
 Creating list | /api/products/create | listName: String | products : Array with object | x-access-token | `POST` |
 Updating list | /api/products/update | products : Array with objects | listName: String | x-access-token | `PUT` |
-Deleting list item | /api/products/deleteitem/`ItemName` | None | None | x-acces-token | `DELETE` |
+Deleting list item | /api/products/deleteitem/`ItemName` | None | None | x-access-token | `DELETE` |
 Deleting List | /api/products/delete | None | None | x-access-token | `DELETE` |
 Get all products | /api/products/ | None | None | x-access-token | `GET` |
+
+## Examples
+```
+#Sign UP pass email and password on body of req.:
+{   
+    "email": "myemail@mail.com",
+    "password":"mypassword" 
+}
+```
+
+
