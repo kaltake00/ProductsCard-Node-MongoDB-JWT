@@ -56,7 +56,7 @@ Note: If product does not exists in list. It will be added automatically.
     - listName: String
 
 
-Description | Path
+Description | Path | Requirements | Optional
 ------------ | -------------
-Content from cell 1 | Content from cell 2
+Sign Up | /api/auth/signup | email: String, password: String | none
 Content in the first column | Content in the second column
