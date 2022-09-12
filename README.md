@@ -58,6 +58,6 @@ Note: If product does not exists in list. It will be added automatically.
 
 Description | Path | Requirements | Optional | Headers
 ------------ | ------------- | --------------- | --------------- | --------------- |
-Sign Up | /api/auth/signup | email: String, password: String | none | none
-Sign In | /api/auth/signin | email: String, Password: String | none | none
-Creating products list | /api/products/create | listName: String <br>  `Example: "listName" : "Updated list name"` |
+Sign Up | /api/auth/signup | email: String, password: String | none | none |
+Sign In | /api/auth/signin | email: String, Password: String | none | none |
+Creating products list | /api/products/create | listName: String <br>  `Example: "listName" : "Updated list name"` | products : Array with object <br> `Example: "products":[{"name":"Apple","quantity":"12"}, {"name":"Cherry","quantity":"6"}]` | x-access-token : `yourToken` |
