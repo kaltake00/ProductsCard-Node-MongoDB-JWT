@@ -57,6 +57,6 @@ Note: If product does not exists in list. It will be added automatically.
 
 
 Description | Path | Requirements | Optional
------------- | -------------
+------------ | ------------- | --------------- | --------- |
 Sign Up | /api/auth/signup | email: String, password: String | none
 Content in the first column | Content in the second column
