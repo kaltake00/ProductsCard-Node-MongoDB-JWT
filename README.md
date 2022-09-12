@@ -56,13 +56,13 @@ Note: If product does not exists in list. It will be added automatically.
     - listName: String
 
 
-Description | Path | Body Required | Body Optional | Headers
------------- | ------------- | --------------- | --------------- | --------------- |
-Sign Up | /api/auth/signup | email: String, password: String | none | none |
-Sign In | /api/auth/signin | email: String, Password: String | none | none |
-Creating list | /api/products/create | listName: String | products : Array with object | x-access-token |
-Updating list | /api/products/update | products : Array with objects | listName: String | x-access-token |
-Deleting list item | /api/products/deleteproductitem/`ItemName` | None | None | x-acces-token | 
-Change Password | /api/user/changepassword | "password" : String | None | x-access-token | 
-Deleting List | /api/products/delete | None | None | x-access-token |
-Get all products | /api/products/ | None | None | x-access-token |
+Description | Path | Body Required | Body Optional | Headers | Method |
+------------ | ------------- | --------------- | --------------- | --------------- | --------------- |
+Sign Up | /api/auth/signup | email: String, password: String | none | none | `POST` |
+Sign In | /api/auth/signin | email: String, Password: String | none | none | `POST` |
+Change Password | /api/user/changepassword | "password" : String | None | x-access-token | `PUT` | 
+Creating list | /api/products/create | listName: String | products : Array with object | x-access-token | `POST` |
+Updating list | /api/products/update | products : Array with objects | listName: String | x-access-token | `PUT` |
+Deleting list item | /api/products/deleteitem/`ItemName` | None | None | x-acces-token | `DELETE` |
+Deleting List | /api/products/delete | None | None | x-access-token | `DELETE` |
+Get all products | /api/products/ | None | None | x-access-token | `GET` |

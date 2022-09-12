@@ -15,6 +15,6 @@ module.exports = function(app) {
     app.get("/api/products",[authJwt, verifyProducts.checkUserListExists], controller.getAllProducts)
     app.post("/api/products/create",[authJwt, verifyProducts.checkDuplicateList],controller.createProductsList)
     app.delete("/api/products/delete",[authJwt, verifyProducts.checkUserListExists], controller.deleteProductsList)
-    app.delete("/api/products/deleteproductitem/:name",[authJwt, verifyProducts.checkUserListExists], controller.deleteProductsItem)
+    app.delete("/api/products/deleteitem/:name",[authJwt, verifyProducts.checkUserListExists], controller.deleteProductsItem)
     app.put("/api/products/update", [authJwt, verifyProducts.checkUserListExists], controller.updateProductList)
 }
