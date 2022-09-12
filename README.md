@@ -54,3 +54,9 @@ Note: If product does not exists in list. It will be added automatically.
     `Example: "products":[{"name":"Apple","quantity":"12"}, {"name":"Cherry","quantity":"6"}]`
 * Optional:
     - listName: String
+
+
+Description | Path
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column
