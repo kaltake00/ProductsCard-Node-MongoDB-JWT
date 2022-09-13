@@ -22,7 +22,7 @@ This is a RESTful backend app based on Node.js, Express.js, MongoDB, Mongoose an
 # APIs
 
 
-Description | Path | Body Required | Body Optional | Headers | Method |
+Description | Endpoint | Body Required | Body Optional | Headers | Method |
 ------------ | ------------- | --------------- | --------------- | --------------- | --------------- |
 Sign Up | /api/auth/signup | email: String, password: String | none | none | `POST` |
 Sign In | /api/auth/signin | email: String, Password: String | none | none | `POST` |
